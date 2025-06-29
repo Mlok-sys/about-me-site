@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Abdulmalik Alorayfij</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Hello, I'm Abdulmalik </h1>
+    <p>Aspiring DevOps / Linux SysOps Engineer with AWS + RHCSA skills.</p>
+    <p>I enjoy working with cloud, automation, and open-source systems.</p>
+  </div>
+</body>
+</html>
