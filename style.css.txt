@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
   font-family: Arial, sans-serif;
   background: #f7f7f7;
@@ -21,3 +22,6 @@ p {
   font-size: 18px;
   line-height: 1.6;
 }
+=======
+
+>>>>>>> 2fb95dc961bde8a5ee87c2da75be938f242dd34d
