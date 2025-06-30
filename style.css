@@ -1,4 +1,4 @@
-/* Reset & base styles */
+/* Base Reset */
 * {
   margin: 0;
   padding: 0;
@@ -6,64 +6,35 @@
 }
 
 body {
-  font-family: 'Helvetica Neue', sans-serif;
-  background-color: #ffffff;
-  color: #222;
-  line-height: 1.7;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background-color: #f4f7fa;
+  color: #333;
+  line-height: 1.8;
+  padding: 20px;
+}
+
+/* Container */
+main {
+  max-width: 900px;
+  margin: auto;
   padding: 20px;
 }
 
 /* Header */
 header {
   text-align: center;
-  padding: 40px 20px;
-  background: linear-gradient(to right, #2f80ed, #56ccf2);
+  padding: 60px 20px 40px;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
   color: white;
-  border-radius: 8px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   margin-bottom: 40px;
 }
 
 header h1 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   margin-bottom: 10px;
 }
 
 header p {
-  font-size: 1.2rem;
-  opacity: 0.9;
-}
-
-/* Sections */
-section {
-  max-width: 800px;
-  margin: 0 auto 50px auto;
-  padding: 0 20px;
-}
-
-section h2 {
-  font-size: 1.8rem;
-  color: #2f80ed;
-  margin-bottom: 15px;
-  border-bottom: 2px solid #eee;
-  padding-bottom: 5px;
-}
-
-section p, section ul {
-  font-size: 1.1rem;
-}
-
-ul {
-  padding-left: 20px;
-}
-
-ul li {
-  margin-bottom: 10px;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  font-size: 0.9rem;
-  padding: 20px;
-  color: #888;
-}
+  font-size
