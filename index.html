@@ -18,8 +18,14 @@
       <p>I'm passionate about Linux systems, cloud automation, and infrastructure as code. I'm currently pursuing RHCSA and building hands-on projects like this one to sharpen my DevOps skills.</p>
     </section>
 
-    <section id="project">
-      <h2>How I Built This Project</h2>
-      <ul>
-        <li>🗂️ Hosted on a private <strong>S3 bucket</strong> (static hosting disabled)</li>
-        <l
+   <section id="project">
+  <h2>How I Built This Project</h2>
+  <ul>
+    <li>🗂️ Hosted on a private <strong>S3 bucket</strong> (static hosting disabled)</li>
+    <li>🔒 Access secured using <strong>Origin Access Control (OAC)</strong> with CloudFront</li>
+    <li>🌐 HTTPS via <strong>CloudFront + ACM certificate</strong></li>
+    <li>🌍 Custom domain registered in <strong>Route 53</strong></li>
+    <li>🤖 CI/CD powered by <strong>GitHub Actions</strong></li>
+  </ul>
+  <p>Every time I push to GitHub, my website is automatically deployed to AWS using a secure, automated pipeline.</p>
+</section>
