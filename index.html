@@ -1,81 +1,28 @@
-/* Base Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<body>
+  <main>
+    <header>
+      <h1>Abdulmalik Alorayfij</h1>
+      <p>Aspiring Linux & DevOps Engineer</p>
+    </header>
 
-body {
-  font-family: 'Segoe UI', Tahoma, sans-serif;
-  background-color: #121212;
-  color: #e0e0e0;
-  line-height: 1.8;
-  padding: 20px;
-}
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I’m passionate about Linux systems, cloud automation, and infrastructure as code. I'm currently pursuing RHCSA and building hands-on projects like this one to sharpen my DevOps skills.</p>
+    </section>
 
-/* Container */
-main {
-  max-width: 900px;
-  margin: auto;
-  padding: 20px;
-}
+    <section id="project">
+      <h2>How I Built This Project</h2>
+      <ul>
+        <li>Hosted on a private <strong>S3 bucket</strong></li>
+        <li>Secured using <strong>ACM + CloudFront HTTPS</strong></li>
+        <li>Custom domain via <strong>Route 53</strong></li>
+        <li>CI/CD pipeline with <strong>GitHub Actions</strong></li>
+      </ul>
+      <p>Every time I push to GitHub, my website auto-deploys to AWS — no manual steps!</p>
+    </section>
 
-/* Header */
-header {
-  text-align: center;
-  padding: 60px 20px 40px;
-  background: linear-gradient(to right, #3333ff, #9900ff);
-  color: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
-  margin-bottom: 40px;
-}
-
-header h1 {
-  font-size: 2.8rem;
-  margin-bottom: 10px;
-}
-
-header p {
-  font-size: 1.2rem;
-  opacity: 0.95;
-}
-
-/* Section Cards */
-section {
-  background: #1e1e1e;
-  border-radius: 12px;
-  padding: 30px 25px;
-  margin-bottom: 30px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
-}
-
-section h2 {
-  font-size: 1.6rem;
-  color: #66ccff;
-  margin-bottom: 15px;
-  border-bottom: 2px solid #333;
-  padding-bottom: 6px;
-}
-
-section p {
-  font-size: 1.1rem;
-  margin-bottom: 12px;
-}
-
-ul {
-  padding-left: 20px;
-  margin-top: 10px;
-}
-
-ul li {
-  margin-bottom: 10px;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  font-size: 0.9rem;
-  color: #888;
-  margin-top: 60px;
-}
+    <footer>
+      <p>&copy; 2025 Abdulmalik Alorayfij</p>
+    </footer>
+  </main>
+</body>
