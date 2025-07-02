@@ -26,11 +26,11 @@
         <li>Custom domain registered with <strong>Amazon Route 53</strong></li>
         <li>Automated deployments using <strong>GitHub Actions</strong> for CI/CD</li>
       </ul>
-      <p>When I push code to GitHub, a GitHub Actions workflow automatically builds and syncs the site to S3, then CloudFront distributes it globally over HTTPS.</p>
+      <p>When I push code to GitHub, a GitHub Actions workflow automatically builds and syncs the site to S3. CloudFront securely delivers the site over HTTPS using an ACM certificate, with Route 53 resolving DNS queries to the CloudFront distribution.</p>
 
       <div style="text-align: center; margin-top: 25px;">
-        <img src="cloud-diagram.png" alt="Cloud Architecture Diagram" style="max-width:100%; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.5);">
-        <p style="color: #8b949e; font-size: 0.9rem; margin-top: 8px;">Diagram: CloudFront + S3 + GitHub Actions pipeline</p>
+        <img src="cloud-architecture-diagram.png" alt="Cloud Architecture Diagram" style="max-width:100%; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.5);">
+        <p style="color: #8b949e; font-size: 0.9rem; margin-top: 8px;">Diagram: Route 53 → CloudFront (OAC) → S3 with CI/CD from GitHub Actions</p>
       </div>
     </section>
 
