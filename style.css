@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Abdulmalik Alorayfij</title>
+  <title>How I Built This Project</title>
   <link rel="stylesheet" href="style.css" />
   <style>
     body {
@@ -110,39 +110,29 @@
 <body>
   <main>
     <header>
-      <h1>Abdulmalik Alorayfij</h1>
-      <p>Aspiring Linux & Cloud Engineer</p>
+      <h1>How I Built This Project</h1>
+      <p>Cloud architecture and deployment workflow</p>
     </header>
 
     <nav>
-      <a href="index.html">About Me</a>
-      <a href="build.html">How I Built This Project</a>
+      <a href="index.html">← Back to About Me</a>
     </nav>
 
-    <section id="about">
-      <h2>About Me</h2>
-      <p>I’m a NOC Engineer with a strong focus on Linux systems, cloud automation, and infrastructure as code. I hold AWS SAA, ITIL, and CCNA+ certifications and am currently pursuing RHCSA. I build hands-on DevOps projects using CI/CD pipelines, serverless technologies, and AWS tools, while bringing solid experience in incident resolution and IT support.</p>
-    </section>
-
-    <section id="certs">
-      <h2>Certifications</h2>
+    <section>
+      <h2>Architecture Overview</h2>
       <ul>
-        <li>AWS Certified Solutions Architect – Associate (2025–2028)</li>
-        <li>CCNA (2022–2025)</li>
-        <li>ITIL 4 Practitioner: Service Request Management (2023–2026)</li>
-        <li>Google Cybersecurity Professional</li>
+        <li>Hosted on a private <strong>S3 bucket</strong> (static website hosting disabled)</li>
+        <li>Secured with <strong>CloudFront + Origin Access Control (OAC)</strong></li>
+        <li>Served over HTTPS via <strong>AWS Certificate Manager (ACM)</strong></li>
+        <li>Custom domain registered with <strong>Amazon Route 53</strong></li>
+        <li>Automated deployments using <strong>GitHub Actions</strong> for CI/CD</li>
       </ul>
-    </section>
+      <p>When I push code to GitHub, a GitHub Actions workflow automatically builds and syncs the site to S3. CloudFront securely delivers the site over HTTPS using an ACM certificate, with Route 53 resolving DNS queries to the CloudFront distribution.</p>
 
-    <section id="projects">
-      <h2>Projects</h2>
-      <ul>
-        <li>3-tier Web Architecture on AWS (multi-AZ)</li>
-        <li>Development Environment with Terraform</li>
-        <li>Quiz Web App Deployment using AWS Amplify & Cognito</li>
-        <li>Power of Math Web App using AWS Serverless Stack (API Gateway, Lambda, DynamoDB)</li>
-        <li>Personal Website hosted on AWS (this one!)</li>
-      </ul>
+      <div style="text-align: center;">
+        <img src="cloud-architecture-diagram.png" alt="Cloud Architecture Diagram" class="diagram">
+        <p class="diagram-caption">Diagram: Route 53 → CloudFront (OAC) → S3 with CI/CD from GitHub Actions</p>
+      </div>
     </section>
 
     <footer>
