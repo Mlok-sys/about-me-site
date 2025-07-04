@@ -17,31 +17,28 @@
       <a href="/" class="nav-link">← Back to About Me</a>
     </nav>
 
+    <!-- Architecture Diagram - moved up and enlarged -->
+    <div class="image-wrapper">
+      <img src="../cloud-architecture-diagram.png" alt="Cloud Architecture Diagram">
+      <p class="caption">Diagram: Route 53 → CloudFront (OAC) → S3 with CI/CD from GitHub Actions</p>
+    </div>
+
     <section>
       <h2>Architecture Overview</h2>
       <ul>
         <li>Hosted on a private <strong>S3 bucket</strong> (static website hosting disabled)</li>
-        <li>Secured with <strong>CloudFront (CDN) + Origin Access Control (OAC)</strong></li>
+        <li>Secured with <strong>CloudFront CDN + Origin Access Control (OAC)</strong></li>
         <li>Served over HTTPS via <strong>AWS Certificate Manager (ACM)</strong></li>
         <li>Custom domain registered with <strong>Amazon Route 53</strong></li>
         <li>Automated deployments using <strong>GitHub Actions</strong> for CI/CD</li>
       </ul>
-
       <p>
-        When I push code to GitHub, an automated <strong>GitHub Actions</strong> workflow defined in a
-        <code>deploy.yml</code> file triggers a CI/CD pipeline. It syncs the updated files to my private S3 bucket
-        and invalidates the CloudFront cache to reflect the changes. The site is delivered globally via CloudFront (CDN),
-        secured with HTTPS using ACM, and DNS resolution is handled by Route 53.
+        Every time I push code to GitHub, an automated GitHub Actions workflow syncs the site to S3.
+        CloudFront (a Content Delivery Network or CDN) delivers the site securely using HTTPS with an ACM certificate.
+        Route 53 resolves DNS queries to the CloudFront distribution.
       </p>
 
-      <p style="text-align:center; margin-top: 15px;">
-        👉 <a href="https://github.com/Mlok-sys/about-me-site/blob/main/.github/workflows/deploy.yml" target="_blank" style="color:#58a6ff;">View the GitHub Actions YAML file</a>
-      </p>
-
-      <div class="image-wrapper">
-        <img src="../cloud-architecture-diagram.png" alt="Cloud Architecture Diagram">
-        <p class="caption">Diagram: Route 53 → CloudFront (OAC) → S3 with CI/CD from GitHub Actions</p>
-      </div>
+      <p><strong>Bonus:</strong> You can also check the actual deployment workflow file used in <code>.github/workflows/deploy.yml</code>.</p>
     </section>
 
     <footer>
