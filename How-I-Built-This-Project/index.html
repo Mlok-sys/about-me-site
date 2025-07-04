@@ -1,54 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>How I Built This Project</title>
-  <link rel="stylesheet" href="../style.css" />
-</head>
-<body>
-  <main>
-    <header>
-      <h1>How I Built This Project</h1>
-      <p>Cloud architecture and deployment workflow</p>
-    </header>
+<section>
+  <h2>Architecture Overview</h2>
+  <ul>
+    <li>Hosted on a private <strong>S3 bucket</strong> (static website hosting disabled)</li>
+    <li>Secured with <strong>CloudFront + Origin Access Control (OAC)</strong></li>
+    <li>Served over HTTPS via <strong>AWS Certificate Manager (ACM)</strong></li>
+    <li>Custom domain registered with <strong>Amazon Route 53</strong></li>
+    <li>Automated deployments using <strong>GitHub Actions</strong> for CI/CD</li>
+  </ul>
+  <p>
+    When I push code to GitHub, a GitHub Actions workflow automatically builds and syncs the site to S3. 
+    CloudFront securely delivers the site over HTTPS using an ACM certificate, with Route 53 resolving DNS queries to the CloudFront distribution.
+  </p>
 
-    <nav style="text-align: center; margin-bottom: 30px;">
-      <a href="/" class="nav-link">← Back to About Me</a>
-    </nav>
+  <div class="image-wrapper">
+    <img src="../cloud-architecture-diagram.png" alt="Cloud Architecture Diagram">
+    <p class="caption">Diagram: Route 53 → CloudFront (OAC) → S3 with CI/CD from GitHub Actions</p>
+  </div>
 
-    <!-- Architecture Diagram - moved up and enlarged -->
-    <div class="image-wrapper">
-      <img src="../cloud-architecture-diagram.png" alt="Cloud Architecture Diagram">
-      <p class="caption">Diagram: Route 53 → CloudFront (OAC) → S3 with CI/CD from GitHub Actions</p>
-    </div>
-
-    <section>
-      <h2>Architecture Overview</h2>
-      <ul>
-        <li>Hosted on a private <strong>S3 bucket</strong> (static website hosting disabled)</li>
-        <li>Secured with <strong>CloudFront CDN + Origin Access Control (OAC)</strong></li>
-        <li>Served over HTTPS via <strong>AWS Certificate Manager (ACM)</strong></li>
-        <li>Custom domain registered with <strong>Amazon Route 53</strong></li>
-        <li>Automated deployments using <strong>GitHub Actions</strong> for CI/CD</li>
-      </ul>
-      <p>
-        Every time I push code to GitHub, an automated GitHub Actions workflow syncs the site to S3.
-        CloudFront (a Content Delivery Network or CDN) delivers the site securely using HTTPS with an ACM certificate.
-        Route 53 resolves DNS queries to the CloudFront distribution.
-      </p>
-
-      <p>
-        You can also check the actual deployment workflow file used in
-        <a href="https://github.com/Mlok-sys/about-me-site/blob/main/.github/workflows/deploy.yml" target="_blank" style="color: #58a6ff; text-decoration: underline;">
-          .github/workflows/deploy.yml
-        </a>.
-      </p>
-    </section>
-
-    <footer>
-      <p>&copy; 2025 Abdulmalik Alorayfij</p>
-    </footer>
-  </main>
-</body>
-</html>
+  <p style="text-align: center; margin-top: 30px; font-size: 0.95rem;">
+    <em>You can also view the actual GitHub Actions CI/CD workflow used to deploy this project in</em><br>
+    <a href="https://github.com/Mlok-sys/about-me-site/blob/main/.github/workflows/deploy.yml" target="_blank" style="color: #58a6ff; text-decoration: underline;">
+      .github/workflows/deploy.yml
+    </a>
+  </p>
+</section>
