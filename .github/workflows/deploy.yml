@@ -3,14 +3,14 @@ name: Deploy to S3 and Invalidate CloudFront
 on:
   push:
     branches:
-      - main  # Change this to 'master' if your repo uses that instead
+      - main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v3
 
       - name: Configure AWS credentials
@@ -20,12 +20,12 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: me-south-1
 
-      - name: Sync files to S3
+      - name: ☁️ Sync files to S3
         run: |
           aws s3 sync . s3://abdulmalikalorayfijstudying.com --delete
 
       - name: Invalidate CloudFront cache
         run: |
           aws cloudfront create-invalidation \
-            --distribution-id E34XOEX24KK1LB \
+            --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} \
             --paths "/*"
